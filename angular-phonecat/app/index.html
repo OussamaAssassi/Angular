@@ -21,7 +21,7 @@
 	  	    	<option value="name">Alphabetical</option>
 	  	    	<option value="age">Newest</option>
 	  	    </select>
-			<input ng-model="query" placeholder="Search...">
+			<input ng-model="toto" placeholder="Search...">
 	  </form>
 	</div>
 </div>
@@ -30,8 +30,10 @@
 		<!--Body content-->
 
 		<ul class="phones">
-		  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-		    <strong>{{phone.name}}</strong>
+		  <li ng-repeat="phone in phones | filter:toto | orderBy:orderProp">
+
+		  	<a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+		    <a href="#/phones/{{phone.id}}"><strong>{{phone.name}}</strong></a>
 		    <p>{{phone.snippet}}</p>
 		  </li>
 		</ul>
@@ -41,4 +43,3 @@
  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-
