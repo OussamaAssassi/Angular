@@ -1,24 +1,28 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-collapse collapse">		  
-		  <form class="navbar-form navbar-right">
-	  		<label>Sort by : </label>
-	  	    <select ng-model="orderProp">
-	  	    	<option value="name">Alphabetical</option>
-	  	    	<option value="age">Newest</option>
-	  	    </select>
-			<input ng-model="toto" placeholder="Search...">
-		  </form>
-		</div>
-	</div>
-</div>
-<div class="span10">
-	<ul class="phones">
-	  <li ng-repeat="phone in phones | filter:toto | orderBy:orderProp">
-
-	  	<a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-	    <a href="#/phones/{{phone.id}}"><strong>{{phone.name}}</strong></a>
-	    <p>{{phone.snippet}}</p>
-	  </li>
-	</ul>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+ 
+      Search: <input ng-model="query">
+     <br/><br/> 
+     Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+ 
+    </div>
+    <div class="span10">
+      <!--Body content-->
+ 
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+ 
+    </div>
+  </div>
 </div>
