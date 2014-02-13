@@ -1,0 +1,22 @@
+[
+	{
+		"lastname" : "Assassi",
+		"firstname" : "Oussama",
+		"city" : "Levallois"
+	},
+	{
+		"lastname" : "Vador",
+		"firstname" : "Dark",
+		"city" : "Montpellier"
+	},
+	{
+		"lastname" : "Skywalker",
+		"firstname" : "Luke",
+		"city" : "Casablanca"
+	},
+	{
+		"lastname" : "Kenobi",
+		"firstname" : "Obi-Wan",
+		"city" : "New York"
+	}
+]

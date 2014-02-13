@@ -1,0 +1,11 @@
+  <div class="starter-template">
+    <ul>
+      <li ng-repeat="customer in customers |orderBy:'city' | filter:customer "><strong>{{customer.city}}</strong> - {{customer.firstname | uppercase}} {{customer.lastname | uppercase}}</li>
+    </ul>
+
+    <h1>Add New Customer</h1>
+    <label>Firstname</label><br/><input type="text" class="form-control" ng-model="newCustomer.firstname"><br/><br/>
+    <label>Lastname</label><br/><input type="text" class="form-control" ng-model="newCustomer.lastname"><br/><br/>
+    <label>City</label><br/><input type="text" class="form-control" ng-model="newCustomer.city"><br/><br/>
+    <button ng-click="addCustomer()">Save</button>
+  </div>
